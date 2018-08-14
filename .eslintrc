@@ -1,0 +1,38 @@
+// npm install --dev eslint prettier eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+// To make all the rules available globally, put it in ~/.eslintrc
+// Or use this file as a starting point for your project's .eslintrc
+{
+	// fix Parsing error: Unexpected token =
+	// https://github.com/babel/babel-eslint/issues/312#issuecomment-317688758
+	"parser": "babel-eslint",
+	'extends': [
+		'airbnb',
+		'prettier',
+		'prettier/react',
+	],
+	'plugins': [
+		'react',
+		'jsx-a11y',
+		'import',
+	],
+	// make eslint knows about variables like 'document' or 'window'
+	'env': {
+		'browser': true,
+		'node': true,
+	},
+	'rules': {
+		'indent': [2, 'tab'],
+		'react/jsx-indent': [2, 'tab'],
+		'react/jsx-one-expression-per-line': 'off',
+		'no-tabs': 0, // disable error (airbnb will throw error when using tab)
+	},
+	'settings': {
+		'import/resolver': {
+			'node': {
+				'extensions': ['.js', '.jsx']
+			},
+		},
+	},
+}
+
+// vim: ft=javascript
