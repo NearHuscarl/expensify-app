@@ -1,11 +1,14 @@
 yarn add babel-core babel-cli babel-loader
 yarn add babel-plugin-transform-class-properties
 yarn add babel-plugin-transform-object-rest-spread
-yarn add webpack webpack-cli webpack-dev-server
+
+https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/701
+yarn add webpack webpack-cli webpack-dev-server extract-text-webpack-plugin@next
+
 yarn add validator
 yarn add react react-dom
 yarn add react-modal
-yarn add css-loader style-loader
+yarn add css-loader
 yarn add sass-loader node-sass
 yarn add normalize.css
 yarn add react-router-dom
