@@ -12,13 +12,15 @@ yarn add css-loader
 yarn add sass-loader node-sass
 yarn add normalize.css
 yarn add react-router-dom
-yarn add redux react-redux
+yarn add redux react-redux redux-thunk
 yarn add uuid
 yarn add momentjs react-dates react-addons-shallow-compare
-yarn add jest
+yarn add jest redux-mock-store
 yarn add enzyme enzyme-adapter-react-16 enzyme-to-json raf
 yarn add express
 yarn add numeral
+yarn add firebase
+yarn add cross-env dotenv
 
 
 heroku-cli
@@ -28,3 +30,8 @@ heroku login
 heroku create <name>
 heroku open
 heroku logs
+heroku config:set KEY=value
+heroku config:unset KEY=value
+
+firebase
+---
