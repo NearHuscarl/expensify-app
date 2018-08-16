@@ -12,7 +12,9 @@ yarn add css-loader
 yarn add sass-loader node-sass
 yarn add normalize.css
 yarn add react-router-dom
+yarn add history
 yarn add redux react-redux redux-thunk
+yarn add -D redux-devtools-extension
 yarn add uuid
 yarn add momentjs react-dates react-addons-shallow-compare
 yarn add jest redux-mock-store

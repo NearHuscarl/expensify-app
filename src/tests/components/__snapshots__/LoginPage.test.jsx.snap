@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LoginPage correctly 1`] = `
+<div>
+  <input
+    autoFocus={true}
+    placeholder="abc@gmail.com"
+    type="text"
+  />
+  <input
+    placeholder="your password"
+    type="password"
+  />
+  <button>
+    Login
+  </button>
+</div>
+`;
