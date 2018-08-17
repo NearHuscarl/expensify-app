@@ -1,9 +1,12 @@
 yarn add babel-core babel-cli babel-loader
 yarn add babel-plugin-transform-class-properties
 yarn add babel-plugin-transform-object-rest-spread
+yarn add babel-polyfill # support wider range of (old) browsers
 
 https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/701
-yarn add webpack webpack-cli webpack-dev-server extract-text-webpack-plugin@next
+yarn add webpack webpack-cli webpack-dev-server
+yarn add extract-text-webpack-plugin@next
+yarn add -D css-hot-loader # auto reload css/scss when failed in webpack watch
 
 yarn add validator
 yarn add react react-dom
@@ -35,5 +38,40 @@ heroku logs
 heroku config:set KEY=value
 heroku config:unset KEY=value
 
-firebase
+firebase rules
 ---
+{
+	"rules": {
+		".read": false,
+		".write": false,
+		"users": {
+			"$user_id": {
+				".read": "$user_id === auth.uid",
+				".write": "$user_id === auth.uid",
+				"expenses": {
+					"$expense_id": {
+						".validate": "newData.hasChildren(['description', 'note', 'amount', 'createdAt'])",
+						"description": {
+							".validate": "newData.isString() && newData.val().length > 0"  
+						},
+						"note": {
+							".validate": "newData.isString()"
+						},
+						"amount": {
+							".validate": "newData.isNumber()"
+						},
+						"createdAt": {
+							".validate": "newData.isNumber()"
+						},
+						"$other": {
+							".validate": false
+						}
+					},
+				},
+				"$other": {
+					".validate": false
+				}
+			}
+		}
+	}
+}
