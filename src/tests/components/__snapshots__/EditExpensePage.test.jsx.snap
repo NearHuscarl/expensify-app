@@ -37,5 +37,12 @@ exports[`should render EditExpensePage correctly 1`] = `
       Remove Expense
     </button>
   </div>
+  <ConfirmModal
+    isOpen={false}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onRequestClose={[Function]}
+    prompt="Are you sure?"
+  />
 </div>
 `;

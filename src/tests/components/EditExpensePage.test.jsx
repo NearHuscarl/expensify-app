@@ -36,8 +36,13 @@ test('should handle startEditExpense', () => {
 	);
 });
 
-test('should handle startRemoveExpense', () => {
+test('should open delete prompt', () => {
 	wrapper.find('button').simulate('click');
+	expect(wrapper.state('isConfirmDeleteModalOpen')).toBe(true);
+});
+
+test('should handle startRemoveExpense', () => {
+	wrapper.find('ConfirmModal').prop('onConfirm')();
 	expect(history.push).toHaveBeenLastCalledWith('/');
 	expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expense.id });
 });
