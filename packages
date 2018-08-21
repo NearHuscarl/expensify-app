@@ -6,6 +6,7 @@ yarn add babel-polyfill # support wider range of (old) browsers
 https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/701
 yarn add webpack webpack-cli webpack-dev-server
 yarn add extract-text-webpack-plugin@next
+yarn add file-loader # load font-awesome
 yarn add -D css-hot-loader # auto reload css/scss when failed in webpack watch
 
 yarn add validator
@@ -26,6 +27,8 @@ yarn add express
 yarn add numeral
 yarn add firebase
 yarn add cross-env dotenv
+yarn add font-awesome
+yarn add react-fontawesome
 
 
 heroku-cli

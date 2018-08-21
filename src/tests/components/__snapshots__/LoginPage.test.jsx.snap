@@ -16,9 +16,36 @@ exports[`should render LoginPage correctly 1`] = `
       It's time to get your expenses under control.
     </p>
     <button
-      className="button"
+      className="box-layout__button button--red"
     >
+      <i
+        className="fa fa-google fa-fw"
+      />
       Login with Google
+    </button>
+    <button
+      className="box-layout__button"
+    >
+      <i
+        className="fa fa-facebook fa-fw"
+      />
+      Login with Facebook
+    </button>
+    <button
+      className="box-layout__button button--light-blue"
+    >
+      <i
+        className="fa fa-twitter fa-fw"
+      />
+      Login with Twitter
+    </button>
+    <button
+      className="box-layout__button button--dark"
+    >
+      <i
+        className="fa fa-github fa-fw"
+      />
+      Login with Github
     </button>
   </div>
 </div>

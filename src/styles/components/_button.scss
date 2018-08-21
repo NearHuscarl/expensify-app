@@ -1,5 +1,4 @@
 .button {
-	background: $blue;
 	border: none;
 	color: white;
 	display: inline-block;
@@ -8,12 +7,15 @@
 	line-height: 1;
 	padding: $s-size;
 	text-decoration: none;
+	transition: background 0.3s ease;
 }
+
+@include generate-button-color('DEFAULT', $blue);
+@include generate-button-color('red', $red);
+@include generate-button-color('light-blue', $light-blue);
+@include generate-button-color('dark', $dark-gray);
+@include generate-button-color('secondary', #888888);
 
 .button--link {
 	background: none;
-}
-
-.button--secondary {
-	background: #888888;
 }
