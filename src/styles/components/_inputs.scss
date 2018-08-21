@@ -9,6 +9,9 @@
 .select {
 	@extend .text-input;
 }
+.option {
+	@extend .text-input;
+}
 
 .textarea {
 	@extend .text-input;

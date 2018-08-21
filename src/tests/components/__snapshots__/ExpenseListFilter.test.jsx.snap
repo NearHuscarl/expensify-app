@@ -27,11 +27,13 @@ exports[`should render ExpenseListFilters correctly 1`] = `
         value="date"
       >
         <option
+          className="option"
           value="date"
         >
-          Visible
+          Date
         </option>
         <option
+          className="option"
           value="amount"
         >
           Amount
@@ -168,11 +170,13 @@ exports[`should render ExpenseListFilters with all data correctly 1`] = `
         value="amount"
       >
         <option
+          className="option"
           value="date"
         >
-          Visible
+          Date
         </option>
         <option
+          className="option"
           value="amount"
         >
           Amount

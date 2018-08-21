@@ -53,8 +53,12 @@ export class ExpenseListFilters extends React.Component {
 							className="select"
 							value={this.props.filters.sortBy}
 							onChange={this.onSortChange}>
-							<option value="date">Visible</option>
-							<option value="amount">Amount</option>
+							<option className="option" value="date">
+								Date
+							</option>
+							<option className="option" value="amount">
+								Amount
+							</option>
 						</select>
 					</div>
 					<div className="input-group__item">
@@ -83,8 +87,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
 	setTextFilter: (text) => dispatch(setTextFilter(text)),
-	sortByDate: () => dispatch(sortByDate),
-	sortByAmount: () => dispatch(sortByAmount),
+	sortByDate: () => dispatch(sortByDate()),
+	sortByAmount: () => dispatch(sortByAmount()),
 	setStartDate: (startDate) => dispatch(setStartDate(startDate)),
 	setEndDate: (endDate) => dispatch(setEndDate(endDate)),
 });
